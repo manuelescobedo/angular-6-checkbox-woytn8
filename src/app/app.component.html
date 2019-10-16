@@ -1,0 +1,13 @@
+{{ selectedItems | json }}
+<form [formGroup]="form">
+	<div>
+		
+    <ng-container *ngFor="let item of items.controls; let i = index;">
+      
+      <label>
+        Item # {{ i + 1 }}
+        <input type="checkbox" [formControl]="item">
+        </label>
+    </ng-container>
+	</div>
+</form>
